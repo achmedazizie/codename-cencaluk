@@ -1,0 +1,33 @@
+#start{
+    border-style:solid;
+    width:250px;
+    height:250px;
+    margin-top:60px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:100px;
+    border-radius:5%;
+}
+
+#wrapper-override{
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+}
+
+#searchplaces{
+    margin-bottom:10px;
+}
+    
+#searchresult{
+    background-color: white;
+    width:100%;
+    height:350px;
+    box-shadow:0 0 8px #d3d3d3;
+    margin-bottom:10px;
+}
+    
+input[type="text"],textarea{
+    background-color: white;
+    box-shadow:0 0 3px #d3d3d3;
+}

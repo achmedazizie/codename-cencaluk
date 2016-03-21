@@ -6,10 +6,17 @@
         </div>
         <div class="center">Search Places</div>
     </ons-toolbar>
-
-    <div style="text-align: center">
-        <h1>Page 2</h1>
-        <ons-button ng-click="app.slidingMenu.toggleMenu()">Toggle Menu</ons-button>
+    <div id="wrapper-override" style="text-align: center">
+        <div id="searchplaces">
+            <section>
+                <input type="text" class="text-input" id="location" placeholder="Select Location" style="display:block; width:100%; height:40px">
+                <input type="text" class="text-input" id="typeFood" placeholder="Type of Food You're Looking" style="display:block; width:100%; height:40px">
+            </section>
+        </div>
+        <div id="searchresult">
+        </div>
+        
+        <ons-button ng-click="app.slidingMenu.toggleMenu()">Submit</ons-button>
     </div>
 
 </ons-page>
