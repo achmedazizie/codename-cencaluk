@@ -7,12 +7,42 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
+    <link text="text/javascript" href="js/engine.js">
+
     <script>
         ons.bootstrap();
+
+        document.addEventListener("deviceready", function(){
+   
+            var onSuccess = function(position){
+                document.getElementById("start").innerHTML = 
+                "Longitude:" + position.coords.longitude + "\n" +
+                "Latitude:" + position.coords.latitude;
+            };   
+            var onError = function(message){
+                alert("Failed to get the current position.");
+            };  
+            var option = {
+                frequency: 5000,
+                timeout: 6000
+            };
+            navigator.geolocation.getCurrentPosition(onSuccess, onError, option);
+                        
+        });
+
+/*            var displayLocation;
+*            function initMap(){
+*                displayLocation = new google.maps.Map(document.getElementById('start'),{
+*                    center: {lat: -34.397, lng: 150.644},
+*                    zoom: 8
+*                });
+            }*/
+
     </script>
 </head>
 <body>
     <ons-sliding-menu var="app.slidingMenu" menu-page="menu.html" main-page="page1.html" side="left" type="overlay" max-slide-distance="250px">
     </ons-sliding-menu>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy7Ars-2cPTC3zSl8ovhAkEGXDTUpnZdc&callback=initMap"async defer></script>
 </body>
 </html>
